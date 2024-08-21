@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock, Timer, Stopwatch & Alarm</title>
+    <link rel="stylesheet" href="alarm.css">
+</head>
+<body>
+    <div class="toggle-container">
+        <label class="toggle-label">
+            <input type="checkbox" id="mode-toggle">
+            <span class="slider"></span>
+        </label>
+    </div>
+    
+    <div class="menu">
+        <button id="clock-btn">Clock</button>
+        <button id="timer-btn">Timer</button>
+        <button id="stopwatch-btn">Stopwatch</button>
+        <button id="alarm-btn">Alarm</button>
+    </div>
+
+    <div class="section" id="clock-section">
+        <h2>Clock</h2>
+        <p id="clock-display"></p>
+    </div>
+
+    <div class="section" id="timer-section">
+        <h2>Timer</h2>
+        <input type="number" id="timer-minutes" placeholder="Minutes">
+        <input type="number" id="timer-seconds" placeholder="Seconds">
+        <button id="start-timer">Start Timer</button>
+        <p id="timer-display"></p>
+    </div>
+
+    <div class="section" id="stopwatch-section">
+        <h2>Stopwatch</h2>
+        <p id="stopwatch-display">00:00:00</p>
+        <button id="start-stopwatch">Start</button>
+        <button id="reset-stopwatch">Reset</button>
+    </div>
+
+    <div class="section" id="alarm-section">
+        <h2>Alarm</h2>
+        <input type="time" id="alarm-time">
+        <button id="set-alarm">Set Alarm</button>
+        <ul id="alarms-list"></ul>
+    </div>
+
+    <!-- Modal for Alarm Confirmation -->
+    <div id="alarm-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p id="modal-message"></p>
+        </div>
+    </div>
+
+
+    <script src="alarm.js"></script>
+</body>
+</html>
